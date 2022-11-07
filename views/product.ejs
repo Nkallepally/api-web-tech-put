@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+             
+            table , tr ,td , th {
+                border: 1px solid;
+                width: 68em;
+                background: burlywood;
+                text-align: center;
+            }
+            h1{
+                color:rgb(14, 78, 33)
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+                width: 85%;
+                align-items: center;
+                margin-left: 3em;
+
+            }
+            .tr-color{
+                color: blue;
+            }
+        </style>
+       
+    </head>
+    <body>
+        <div class="container">
+            <h1>Product Table</h1>
+            <table>
+                <tr class="tr-color">
+                    <th>Product_id</th>
+                    <th>Product_Type</th>
+                    <th>Product_Name</th>
+                    <th>Product_Price</th>
+                    <th>Available_Quantity</th>
+                </tr>
+                <% for (let i = 0; i < product.length;i++) {%>
+                    <tr>
+                        <td><%= product[i].product_id%></td>
+                        <td><%= product[i].product_type %></td>
+                        <td><%= product[i].product_name %></td>
+                        <td><%= product[i].product_price %></td>
+                        <td><%= product[i].available_quantity %></td>
+                    </tr>
+                    
+                    <% } %>
+                </table>
+        </div>
+    </body>
+</html>

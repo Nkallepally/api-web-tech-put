@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+            
+            table , tr ,td , th {
+                border: 1px solid;
+                width: 68em;
+                background: burlywood;
+                text-align: center;
+            }
+            h1{
+                color:rgb(14, 78, 33)
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+                width: 85%;
+                align-items: center;
+                margin-left: 5em;
+                top: 0%;
+
+            }
+            .tr-color{
+                color: blue;
+            }
+        </style>
+            
+    </head>
+    <body>
+        <div class="container">
+            
+            <h1>Orders Table</h1>
+            <table>
+                <tr class="tr-color">
+                    <th>Customer_Id</th>
+                    <th>Product_Id</th>
+                    <th>Product_Name</th>
+                    <th>Quantity</th>
+                </tr>
+
+                <% for (let i = 0; i < orders.length;i++) {%>
+                    <tr>
+                        <td><%= orders[i].customer_id %></td>
+                        <td><%= orders[i].product_id %></td>
+                        <td><%= orders[i].product_name %></td>
+                        <td><%= orders[i].quantity %></td>
+
+                    </tr>
+
+                    
+                <% } %>
+        
+                </table>
+        </div>
+    </body>
+</html>
